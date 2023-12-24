@@ -89,8 +89,8 @@ function Study({ deck, setDeck }) {
       <>
         <p>Not enough cards</p>
         <p>
-          You need at least 3 cards to study. There this deck contains{" "}
-          {studyGroup.cards.length} card(s).
+          {`You need at least 3 cards to study. This deck contains 
+          ${studyGroup.cards.length} card(s).`}
         </p>
         <Link to={`/decks/${deckId}/cards/new`}>
           <button type="button" className="btn btn-primary btn-small">
@@ -103,6 +103,7 @@ function Study({ deck, setDeck }) {
   return (
     <>
       <Breadcrumb deck={deck} action={"Study"}/>
+
       <h1>Study: {deck.name}</h1>
       {card}
     </>
